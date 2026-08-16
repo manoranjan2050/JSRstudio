@@ -2,13 +2,15 @@
 
 ## Before Going Live
 
-- [ ] Replace all placeholder SVG images in `images/` with real JSR Studio
-      photography (`.webp` preferred). See
-      [CONFIG.md — How to Add New Photos](CONFIG.md#how-to-add-new-photos).
-- [ ] Replace `images/hero/hero.svg` with a real hero photo and update the
-      two references in `index.html`.
-- [ ] Replace `images/about/studio.svg` with a real studio/photographer
-      photo.
+- [ ] **Replace all demo photos with real JSR Studio photography.** Every
+      photo slot (hero, about, service cards, gallery, featured) currently
+      hotlinks a temporary [Lorem Picsum](https://picsum.photos) demo image
+      — real photos used only as visual placeholders, not stored in this
+      repo. Swap each `https://picsum.photos/...` URL for a real local file
+      per [CONFIG.md — How to Add New Photos](CONFIG.md#how-to-add-new-photos)
+      and the [Photo Size Guide](README.md#photo-size-guide). The original
+      SVG gradient placeholders are still in `images/` if you want a
+      "coming soon" look instead of demo photos in the meantime.
 - [ ] Confirm/replace the Google Maps link in `js/config.js` (`maps` field)
       with the exact studio location share link.
 - [ ] Replace placeholder statistics in `js/config.js` (`stats` array —
@@ -19,8 +21,8 @@
       YouTube, Twitter/X, Google Business — icons appear automatically once
       filled into `js/config.js`.
       - [x] Instagram added: `https://www.instagram.com/jsr_studio_dengapol/`
-- [ ] Update `og:url` / `canonical` / JSON-LD URLs in `index.html` if a
-      custom domain is set up (see [DEPLOYMENT.md](DEPLOYMENT.md)).
+- [x] Custom domain live: `https://jsrstudio.in/` — `og:url`/`canonical`
+      updated to match.
 - [ ] Run a Lighthouse audit after real photos are added (large unoptimized
       images are the most likely thing to drop the performance score below
       90 — keep photos compressed and appropriately sized).

@@ -526,6 +526,16 @@ section {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.mobile-nav {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */

@@ -1,27 +1,27 @@
 {
-  "_comment": "Add or remove photos by editing this file only. 'category' must match a filter key used in js/gallery.js (wedding, prewedding, events, birthday, portraits, other). Replace placeholder image paths with your real photographs — keep the same folder structure.",
+  "_comment": "Images currently point to Lorem Picsum (https://picsum.photos) as TEMPORARY demo photography — real photos, hotlinked (not stored in this repo) purely as visual placeholders. Replace every 'image' value below with a real JSR Studio photo path (e.g. images/wedding/01.webp) before launch. 'category' must match a filter key used in js/gallery.js (wedding, prewedding, events, birthday, portraits, other).",
 
   "featured": [
     {
-      "image": "images/wedding/featured-01.svg",
+      "image": "https://picsum.photos/seed/jsr-wedding-featured/1200/1600",
       "category": "Wedding",
       "title": "Wedding Stories",
       "filter": "wedding"
     },
     {
-      "image": "images/prewedding/featured-01.svg",
+      "image": "https://picsum.photos/seed/jsr-prewedding-featured/1200/1600",
       "category": "Pre-Wedding",
       "title": "Beautiful Beginnings",
       "filter": "prewedding"
     },
     {
-      "image": "images/events/featured-01.svg",
+      "image": "https://picsum.photos/seed/jsr-events-featured/1200/1600",
       "category": "Events",
       "title": "Celebrations",
       "filter": "events"
     },
     {
-      "image": "images/portraits/featured-01.svg",
+      "image": "https://picsum.photos/seed/jsr-portraits-featured/1200/1600",
       "category": "Portraits",
       "title": "Portrait Stories",
       "filter": "portraits"
@@ -29,21 +29,21 @@
   ],
 
   "gallery": [
-    { "image": "images/wedding/01.svg", "title": "Wedding Moments", "category": "wedding" },
-    { "image": "images/wedding/02.svg", "title": "Sacred Vows", "category": "wedding" },
-    { "image": "images/wedding/03.svg", "title": "The Big Day", "category": "wedding" },
-    { "image": "images/prewedding/01.svg", "title": "Golden Hour Love", "category": "prewedding" },
-    { "image": "images/prewedding/02.svg", "title": "Two Hearts, One Story", "category": "prewedding" },
-    { "image": "images/prewedding/03.svg", "title": "Forever Begins", "category": "prewedding" },
-    { "image": "images/events/01.svg", "title": "Grand Celebration", "category": "events" },
-    { "image": "images/events/02.svg", "title": "Festive Moments", "category": "events" },
-    { "image": "images/events/03.svg", "title": "Special Gathering", "category": "events" },
-    { "image": "images/birthday/01.svg", "title": "Birthday Bliss", "category": "birthday" },
-    { "image": "images/birthday/02.svg", "title": "Sweet Celebrations", "category": "birthday" },
-    { "image": "images/portraits/01.svg", "title": "Timeless Portrait", "category": "portraits" },
-    { "image": "images/portraits/02.svg", "title": "Natural Light Portrait", "category": "portraits" },
-    { "image": "images/portraits/03.svg", "title": "Studio Portrait", "category": "portraits" },
-    { "image": "images/other/01.svg", "title": "Traditional Ceremony", "category": "other" },
-    { "image": "images/other/02.svg", "title": "Cultural Celebration", "category": "other" }
+    { "image": "https://picsum.photos/seed/jsr-wedding-01/1200/1500", "title": "Wedding Moments", "category": "wedding" },
+    { "image": "https://picsum.photos/seed/jsr-wedding-02/1500/1200", "title": "Sacred Vows", "category": "wedding" },
+    { "image": "https://picsum.photos/seed/jsr-wedding-03/1200/1500", "title": "The Big Day", "category": "wedding" },
+    { "image": "https://picsum.photos/seed/jsr-prewedding-01/1200/1500", "title": "Golden Hour Love", "category": "prewedding" },
+    { "image": "https://picsum.photos/seed/jsr-prewedding-02/1500/1200", "title": "Two Hearts, One Story", "category": "prewedding" },
+    { "image": "https://picsum.photos/seed/jsr-prewedding-03/1200/1500", "title": "Forever Begins", "category": "prewedding" },
+    { "image": "https://picsum.photos/seed/jsr-events-01/1500/1200", "title": "Grand Celebration", "category": "events" },
+    { "image": "https://picsum.photos/seed/jsr-events-02/1200/1500", "title": "Festive Moments", "category": "events" },
+    { "image": "https://picsum.photos/seed/jsr-events-03/1200/1200", "title": "Special Gathering", "category": "events" },
+    { "image": "https://picsum.photos/seed/jsr-birthday-01/1200/1200", "title": "Birthday Bliss", "category": "birthday" },
+    { "image": "https://picsum.photos/seed/jsr-birthday-02/1200/1500", "title": "Sweet Celebrations", "category": "birthday" },
+    { "image": "https://picsum.photos/seed/jsr-portraits-01/1200/1500", "title": "Timeless Portrait", "category": "portraits" },
+    { "image": "https://picsum.photos/seed/jsr-portraits-02/1200/1200", "title": "Natural Light Portrait", "category": "portraits" },
+    { "image": "https://picsum.photos/seed/jsr-portraits-03/1500/1200", "title": "Studio Portrait", "category": "portraits" },
+    { "image": "https://picsum.photos/seed/jsr-other-01/1200/1200", "title": "Traditional Ceremony", "category": "other" },
+    { "image": "https://picsum.photos/seed/jsr-other-02/1200/1500", "title": "Cultural Celebration", "category": "other" }
   ]
 }
