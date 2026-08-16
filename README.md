@@ -75,6 +75,28 @@ Then open `http://localhost:8080`.
 
 ---
 
+## Uploading Photos Without Using Git Commands
+
+For anyone adding photos (e.g. a photographer) who doesn't want to learn
+git: **`upload-photos.bat`** (Windows) automates it. Copy photos into the
+matching `images\...` folder, double-click the file, type a short note (or
+just press Enter), and it commits + pushes for you.
+
+**One-time setup, per computer:**
+1. Install [Git for Windows](https://git-scm.com/download/win).
+2. Clone the repo once: `git clone https://github.com/manoranjan2050/JSRstudio.git`
+3. Make sure `upload-photos.bat` is inside that cloned folder, next to `index.html`.
+4. Ask the repo owner to add that person as a **collaborator** on GitHub
+   (Settings → Collaborators) — without this, the final push will fail with
+   a permission error.
+
+The script only ever touches `images/`, `data/`, and `assets/` — it won't
+accidentally commit code changes. It auto-syncs with GitHub before pushing
+and stops with a plain-English message (never attempts anything risky) if
+that sync hits a conflict.
+
+---
+
 ## Placeholder Photography — IMPORTANT
 
 All images currently in `images/` are **generated placeholder graphics**
