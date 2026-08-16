@@ -86,6 +86,43 @@ See "[How to add new photos](CONFIG.md#how-to-add-new-photos)" in CONFIG.md.
 
 ---
 
+## Photo Size Guide
+
+Exact filename + recommended pixel/inch/cm size for every photo slot on the
+site — hand this to a photographer or anyone prepping images for the site.
+
+![JSR Studio photo size guide — table of every image filename with recommended pixel, inch, and centimeter dimensions](assets/docs/photo-size-guide.png)
+
+| Section | File (relative to `images/`) | Orientation | Pixels (W×H) |
+|---|---|---|---|
+| Hero | `hero/hero.svg` | Landscape 16:9 | 1920 × 1080 |
+| About | `about/studio.svg` | Portrait 4:5 | 1200 × 1500 |
+| Wedding | `wedding/01.svg`, `03.svg` | Portrait 4:5 | 1200 × 1500 |
+| Wedding | `wedding/02.svg` | Landscape 5:4 | 1500 × 1200 |
+| Wedding | `wedding/featured-01.svg` | Featured 3:4 | 1200 × 1600 |
+| Pre-Wedding | `prewedding/01.svg`, `03.svg` | Portrait 4:5 | 1200 × 1500 |
+| Pre-Wedding | `prewedding/02.svg` | Landscape 5:4 | 1500 × 1200 |
+| Pre-Wedding | `prewedding/featured-01.svg` | Featured 3:4 | 1200 × 1600 |
+| Events | `events/01.svg` | Landscape 5:4 | 1500 × 1200 |
+| Events | `events/02.svg` | Portrait 4:5 | 1200 × 1500 |
+| Events | `events/03.svg` | Square 1:1 | 1200 × 1200 |
+| Events | `events/featured-01.svg` | Featured 3:4 | 1200 × 1600 |
+| Birthday | `birthday/01.svg` | Square 1:1 | 1200 × 1200 |
+| Birthday | `birthday/02.svg` | Portrait 4:5 | 1200 × 1500 |
+| Portraits | `portraits/01.svg` | Portrait 4:5 | 1200 × 1500 |
+| Portraits | `portraits/02.svg` | Square 1:1 | 1200 × 1200 |
+| Portraits | `portraits/03.svg` | Landscape 5:4 | 1500 × 1200 |
+| Portraits | `portraits/featured-01.svg` | Featured 3:4 | 1200 × 1600 |
+| Other | `other/01.svg` | Square 1:1 | 1200 × 1200 |
+| Other | `other/02.svg` | Portrait 4:5 | 1200 × 1500 |
+| Digital Service Centre | `other/csc-center.svg` | Landscape 4:3 | 1200 × 900 |
+
+Inches/cm (at 300 DPI print resolution) are in the image above — for the
+website itself only the pixel size matters. Full notes on format, file size
+targets, and where each file goes: [CONFIG.md — How to Add New Photos](CONFIG.md#how-to-add-new-photos).
+
+---
+
 ## Editing Cheat Sheet
 
 | I want to... | Edit this file |
