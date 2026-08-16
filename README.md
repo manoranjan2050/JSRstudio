@@ -95,6 +95,12 @@ accidentally commit code changes. It auto-syncs with GitHub before pushing
 and stops with a plain-English message (never attempts anything risky) if
 that sync hits a conflict.
 
+If someone forked the repo and cloned their fork instead of the main repo,
+the script detects that automatically and re-points itself at
+`manoranjan2050/JSRstudio` — no manual git commands needed. This only
+works once they've been added as a collaborator on step 4 above; a fork
+alone doesn't grant push access to the real repo.
+
 ---
 
 ## Placeholder Photography — IMPORTANT

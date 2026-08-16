@@ -4,12 +4,19 @@ REM  JSR Studio - Upload Photos to GitHub
 REM ============================================================
 REM  One-time setup (only needed once, on a new computer):
 REM    1. Install Git for Windows: https://git-scm.com/download/win
-REM    2. Clone the project once:
+REM    2. Ask the website developer to add your GitHub account as a
+REM       COLLABORATOR on https://github.com/manoranjan2050/JSRstudio
+REM       (Settings -> Collaborators). Without this, uploading below
+REM       will fail with a permission error, even if everything else
+REM       is set up correctly.
+REM    3. Clone the project once (a plain clone of the main repo is
+REM       simplest - you do NOT need to fork it):
 REM         git clone https://github.com/manoranjan2050/JSRstudio.git
-REM    3. Make sure this .bat file is saved INSIDE that JSRstudio
+REM       If you already cloned your own fork instead, that's fine too
+REM       - this script detects that and points itself at the main repo
+REM       automatically.
+REM    4. Make sure this .bat file is saved INSIDE that JSRstudio
 REM       folder (next to index.html).
-REM    4. Ask the website developer to add your GitHub account as a
-REM       collaborator on the repo, so you're allowed to upload.
 REM
 REM  Every time after that:
 REM    1. Copy/replace your photos into the matching images\ folder
@@ -50,6 +57,17 @@ git config user.name >nul 2>nul
 if errorlevel 1 git config user.name "JSR Studio Team"
 git config user.email >nul 2>nul
 if errorlevel 1 git config user.email "studio@jsrstudio.local"
+
+REM If this folder was cloned from a fork instead of the main repo, fix
+REM it automatically so uploads go straight to the live website's repo
+REM (this only works if you've already been added as a collaborator
+REM there - ask the website developer if pushing fails below).
+for /f "delims=" %%u in ('git remote get-url origin 2^>nul') do set "origin_url=%%u"
+echo !origin_url! | findstr /i "manoranjan2050/JSRstudio" >nul
+if errorlevel 1 (
+    echo Fixing remote repository link...
+    git remote set-url origin https://github.com/manoranjan2050/JSRstudio.git
+)
 
 echo Checking for new or changed photos...
 git add images data assets
