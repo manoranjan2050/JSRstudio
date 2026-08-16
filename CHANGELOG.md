@@ -2,6 +2,30 @@
 
 All notable changes to the JSR Studio website are documented in this file.
 
+## [1.2.0] — 2026-08-16
+
+### Added
+- **Installable PWA**: `manifest.webmanifest`, a service worker (`sw.js`)
+  for offline/repeat-visit caching, generated app icons (192/512, plus
+  maskable variants) and iOS meta tags. An "Install App" button appears in
+  the header/mobile nav automatically once the browser reports the site is
+  installable.
+- **New logo mark**: a designed camera-ring + sparkle icon (blue→purple
+  gradient) replacing the plain icon-font badge, used as the favicon and
+  header/footer logo (`assets/logo/favicon.svg`).
+- **Digital Service Centre section**: a dedicated, wider service card
+  listing all 12 real services (Xerox, Photo, Video Shooting, Video
+  Editing, Mobile Recharge, Mobile Accessories, Cash Withdrawal,
+  Lamination, Internet, Bill Payments, Bike Insurance, Gift Items),
+  plus matching mentions in the About text and footer.
+- **Contact QR code**: a vCard QR code in the Contact section
+  (`assets/qr/contact-qr.png`) that lets visitors scan-to-save JSR
+  Studio's contact details directly on their phone. Verified to decode
+  correctly.
+- `assets/docs/photo-size-guide.png` — a shareable reference sheet listing
+  every photo file's recommended pixel/inch/cm size, for briefing a
+  photographer.
+
 ## [1.1.0] — 2026-08-16
 
 ### Added

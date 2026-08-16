@@ -209,4 +209,36 @@
     prevBtn.addEventListener("click", () => scrollByCard(-1));
     nextBtn.addEventListener("click", () => scrollByCard(1));
   }
+
+  /* ---------------- PWA: service worker + install prompt ---------------- */
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch((err) => {
+        console.warn("Service worker registration failed:", err);
+      });
+    });
+  }
+
+  let deferredInstallPrompt = null;
+  const installBtns = document.querySelectorAll(".install-app-btn");
+
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    installBtns.forEach((btn) => (btn.hidden = false));
+  });
+
+  installBtns.forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      installBtns.forEach((b) => (b.hidden = true));
+    });
+  });
+
+  window.addEventListener("appinstalled", () => {
+    installBtns.forEach((btn) => (btn.hidden = true));
+  });
 })();

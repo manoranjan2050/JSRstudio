@@ -1,9 +1,13 @@
 # JSR Studio — Photography Portfolio Website
 
-A premium, modern, mobile-first static website for **JSR Studio**, a photography
-studio based in Balikuda, Jagatsinghpur, Odisha, India.
+A premium, modern, mobile-first static website for **JSR Studio**, a
+photography studio and all-in-one Digital Service Centre based in Balikuda,
+Jagatsinghpur, Odisha, India.
 
 Live site (after GitHub Pages is enabled): `https://manoranjan2050.github.io/JSRstudio/`
+
+Installable as an app on mobile home screens (PWA) — see
+[CONFIG.md](CONFIG.md#pwa--installable-on-mobile).
 
 ---
 
@@ -12,10 +16,11 @@ Live site (after GitHub Pages is enabled): `https://manoranjan2050.github.io/JSR
 Pure static site — **no backend, no build step**:
 
 - HTML5
-- CSS3 (custom, no framework)
+- CSS3 (custom sky-blue/lavender design system) + [Tailwind CSS](https://tailwindcss.com/) via CDN for utility touches
 - Vanilla JavaScript (ES6+)
 - [Google Fonts](https://fonts.google.com/) (Playfair Display + Inter)
 - [Font Awesome](https://fontawesome.com/) (icon CDN)
+- Web App Manifest + Service Worker (installable, works offline after first visit)
 
 Works directly on **GitHub Pages**, any static host, or opened locally.
 
@@ -90,6 +95,10 @@ See "[How to add new photos](CONFIG.md#how-to-add-new-photos)" in CONFIG.md.
 | Change colors | `css/style.css` (`:root` variables at the top) |
 | Change page text/sections | `index.html` |
 | Add a new portfolio category | See [CONFIG.md](CONFIG.md#how-to-add-a-new-portfolio-category) |
+| Edit the Digital Service Centre list | `index.html` — see [CONFIG.md](CONFIG.md#how-to-edit-the-digital-service-centre-list) |
+| Change the logo | `assets/logo/favicon.svg` — see [CONFIG.md](CONFIG.md#logo) |
+| Update the contact QR code | `assets/qr/contact-qr.png` — see [CONFIG.md](CONFIG.md#contact-qr-code) |
+| Change PWA app name/icons | `manifest.webmanifest` — see [CONFIG.md](CONFIG.md#pwa--installable-on-mobile) |
 
 Full details for each of these are in [CONFIG.md](CONFIG.md).
 

@@ -193,3 +193,58 @@ needed.
 
 The website intentionally does **not** embed a heavy interactive map — it
 uses a lightweight "Open in Google Maps" button for performance.
+
+---
+
+## How to Edit the Digital Service Centre List
+
+The 12 services (Xerox, Photo, Video Shooting, Video Editing, Mobile
+Recharge, Mobile Accessories, Cash Withdrawal, Lamination, Internet, Bill
+Payments, Bike Insurance, Gift Items) are plain list items in `index.html`
+inside the `<ul class="service-chip-list">` block within the "Digital
+Service Centre" service card. Add, remove, or rename `<li>` entries there —
+they wrap automatically. The same information is echoed briefly in the
+About section paragraph and the footer's Services list; update those too if
+the service list changes meaningfully.
+
+---
+
+## PWA — Installable on Mobile
+
+The site is a installable Progressive Web App:
+
+- **`manifest.webmanifest`** — app name, colors, and icons. Edit `name`,
+  `short_name`, `theme_color`, or `background_color` here.
+- **`sw.js`** — the service worker that caches the app shell for offline
+  use and repeat-visit speed. If you add new core files (not gallery
+  photos — those cache automatically on first view), add them to the
+  `APP_SHELL` array and bump `CACHE_VERSION` so returning visitors get the
+  update.
+- **Icons** — `assets/icons/icon-192.png`, `icon-512.png`, and their
+  `-maskable-` variants, plus `assets/icons/apple-touch-icon.png`. These
+  were generated from a Python/Pillow script; if you redesign the logo,
+  regenerate matching icons at the same sizes and file names so the
+  manifest keeps working.
+- An **"Install App"** button appears automatically in the header (and
+  mobile menu) once the visitor's browser reports the site as installable
+  (Chrome/Edge on Android and desktop). iOS Safari doesn't support this
+  prompt — users there install via **Share → Add to Home Screen**, which
+  works automatically thanks to the `apple-touch-icon` and
+  `apple-mobile-web-app-*` meta tags in `index.html`.
+
+## Logo
+
+The logo mark (favicon, header, and footer) is
+`assets/logo/favicon.svg` — a single gradient-and-camera-ring SVG used
+everywhere via `<img>`, so editing that one file updates the logo
+site-wide. `assets/logo/logo-mark-preview.png` is a larger PNG preview of
+the same design for sharing outside the website (e.g. social profiles).
+
+## Contact QR Code
+
+`assets/qr/contact-qr.png` is a QR code encoding JSR Studio's contact info
+as a vCard — scanning it on a phone offers to save the contact directly (no
+app or internet lookup needed). It's shown in the Contact section. If the
+phone number or address changes, regenerate it with the `qrcode` Python
+package encoding the same vCard fields used in `js/config.js`, then replace
+the file at the same path.

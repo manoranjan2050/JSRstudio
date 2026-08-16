@@ -381,17 +381,14 @@ section {
 .logo .logo-icon {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gradient-accent);
-  color: #fff;
+  border-radius: 30%;
   flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition);
 }
 
-.logo .logo-icon i {
-  font-size: 1.05rem;
+.logo:hover .logo-icon {
+  transform: rotate(-6deg) scale(1.05);
 }
 
 .logo .logo-sub {
@@ -461,6 +458,36 @@ section {
 .header-cta {
   padding: 12px 24px;
   font-size: 0.9rem;
+}
+
+.install-app-btn {
+  padding: 12px 20px;
+  font-size: 0.86rem;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.install-app-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.site-header.scrolled .install-app-btn {
+  border-color: var(--color-border);
+  color: var(--color-navy);
+}
+
+.site-header.scrolled .install-app-btn:hover {
+  background: var(--color-light-blue);
+}
+
+.mobile-nav .install-app-btn {
+  border-color: var(--color-border);
+  color: var(--color-navy);
+  margin-top: 8px;
+}
+
+.mobile-nav .install-app-btn:hover {
+  background: var(--color-light-blue);
 }
 
 .nav-toggle {
@@ -852,6 +879,34 @@ section {
 
 .service-link:hover {
   gap: 12px;
+}
+
+.service-card-wide {
+  grid-column: span 2;
+}
+
+.service-card-wide .service-media {
+  aspect-ratio: 16/6;
+}
+
+.service-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.service-chip-list li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 13px;
+  border-radius: 999px;
+  color: var(--color-navy);
+  background: var(--color-light-blue);
+}
+
+.service-chip-list li:nth-child(odd) {
+  background: var(--color-purple-light);
 }
 
 /* ==========================================================================
@@ -1399,6 +1454,15 @@ section {
   grid-column: 1 / -1;
 }
 
+.contact-qr-img {
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-sm);
+  border: 6px solid #fff;
+  box-shadow: var(--shadow-md);
+  margin-top: 4px;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -1743,7 +1807,8 @@ section {
 
 @media (max-width: 860px) {
   .main-nav,
-  .header-cta {
+  .header-cta,
+  .header-actions .install-app-btn {
     display: none;
   }
 

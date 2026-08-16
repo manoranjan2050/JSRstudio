@@ -84,6 +84,13 @@ After enabling Pages, check:
   - [ ] Portfolio filters and lightbox work
   - [ ] `tel:` and `wa.me` links work on a phone
   - [ ] No horizontal scrolling on mobile widths (320px–428px)
+  - [ ] On Chrome for Android, an install prompt/banner appears (or the
+        header's "Install App" button becomes visible) — confirms the PWA
+        manifest + service worker registered correctly over HTTPS
+  - [ ] On iOS Safari, **Share → Add to Home Screen** shows the JSR Studio
+        icon and name correctly
+  - [ ] The contact QR code in the Contact section scans and offers to save
+        JSR Studio as a contact
 
 ## Notes
 

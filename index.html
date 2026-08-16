@@ -25,6 +25,15 @@
 
   <!-- Favicon -->
   <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png" />
+
+  <!-- PWA: installable on mobile home screens -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="JSR Studio" />
+  <meta name="mobile-web-app-capable" content="yes" />
 
   <!-- Preload hero image only -->
   <link rel="preload" as="image" href="images/hero/hero.svg" />
@@ -103,7 +112,7 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="#home" class="logo" aria-label="JSR Studio – Home">
-        <span class="logo-icon" aria-hidden="true"><i class="fa-solid fa-camera-retro"></i></span>
+        <img src="assets/logo/favicon.svg" alt="" class="logo-icon" width="40" height="40" />
         <span>
           JSR Studio
           <span class="logo-sub">Photography</span>
@@ -120,6 +129,9 @@
       </nav>
 
       <div class="header-actions">
+        <button class="btn btn-outline install-app-btn" type="button" hidden>
+          <i class="fa-solid fa-download" aria-hidden="true"></i> Install App
+        </button>
         <a href="#contact" class="btn btn-primary header-cta">Book Now</a>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
@@ -134,6 +146,9 @@
       <a href="#portfolio" class="nav-link">Our Work</a>
       <a href="#why-us" class="nav-link">Why Us</a>
       <a href="#contact" class="nav-link">Contact</a>
+      <button class="btn btn-outline install-app-btn btn-block" type="button" hidden>
+        <i class="fa-solid fa-download" aria-hidden="true"></i> Install App
+      </button>
       <a href="#contact" class="btn btn-primary header-cta">Book Now</a>
     </nav>
   </header>
@@ -186,11 +201,13 @@
           <h2 class="about-heading">We Capture Stories, Not Just Photographs.</h2>
           <p>JSR Studio is dedicated to capturing genuine emotions, beautiful moments and unforgettable memories through professional photography, proudly based in Jagatsinghpur, Odisha.</p>
           <p>We provide photography services for weddings, events, portraits, birthdays, pre-wedding sessions and other special occasions — bringing a thoughtful, creative eye to every frame.</p>
+          <p>Alongside the studio, we also run an <strong>All-in-One Digital Service Centre</strong> — Xerox, photo &amp; video shooting/editing, mobile recharge &amp; accessories, cash withdrawal, lamination, internet, bill payments, bike insurance and gift items, all under one roof.</p>
           <ul class="about-list">
             <li><i class="fa-solid fa-check" aria-hidden="true"></i> Wedding &amp; Pre-Wedding</li>
             <li><i class="fa-solid fa-check" aria-hidden="true"></i> Events &amp; Celebrations</li>
             <li><i class="fa-solid fa-check" aria-hidden="true"></i> Birthday Photography</li>
             <li><i class="fa-solid fa-check" aria-hidden="true"></i> Portrait Sessions</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Digital Service Centre</li>
           </ul>
           <a href="#portfolio" class="btn btn-primary">Discover Our Work</a>
           <p class="about-signature">JSR Studio</p>
@@ -280,6 +297,32 @@
               <h3>Traditional &amp; Cultural Events</h3>
               <p>Capture important ceremonies, traditions and cultural celebrations.</p>
               <a href="#portfolio" class="service-link" data-filter="other">View Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="service-card service-card-wide" data-aos="fade-up">
+            <div class="service-media">
+              <img src="images/other/csc-center.svg" alt="JSR Studio Digital Service Centre — Xerox, photo/video, mobile recharge and more" loading="lazy" />
+              <span class="service-icon"><i class="fa-solid fa-print" aria-hidden="true"></i></span>
+            </div>
+            <div class="service-body">
+              <h3>Digital Service Centre — All In One</h3>
+              <p>An all-in-one digital services counter right alongside our studio — fast service, everything under one roof.</p>
+              <ul class="service-chip-list">
+                <li>Xerox</li>
+                <li>Photo</li>
+                <li>Video Shooting</li>
+                <li>Video Editing</li>
+                <li>Mobile Recharge</li>
+                <li>Mobile Accessories</li>
+                <li>Cash Withdrawal</li>
+                <li>Lamination</li>
+                <li>Internet</li>
+                <li>Bill Payments</li>
+                <li>Bike Insurance</li>
+                <li>Gift Items</li>
+              </ul>
+              <a href="#contact" class="service-link">Enquire Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
         </div>
@@ -488,6 +531,13 @@
             <a href="https://maps.google.com/?q=Balikuda,Jagatsinghpur,Odisha,754108" class="btn btn-outline" target="_blank" rel="noopener" id="contactMaps">Open Location in Google Maps</a>
           </div>
 
+          <div class="contact-card contact-qr-card" data-aos="fade-up">
+            <span class="contact-icon"><i class="fa-solid fa-qrcode" aria-hidden="true"></i></span>
+            <h3>Save Our Contact</h3>
+            <p>Scan with your phone camera to save JSR Studio directly to your contacts.</p>
+            <img src="assets/qr/contact-qr.png" alt="QR code to save JSR Studio's contact details on your phone" class="contact-qr-img" width="160" height="160" loading="lazy" />
+          </div>
+
           <div class="contact-card contact-full" data-aos="fade-up">
             <span class="contact-icon"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i></span>
             <h3>Follow JSR Studio</h3>
@@ -504,7 +554,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="#home" class="logo">
-          <span class="logo-icon" aria-hidden="true"><i class="fa-solid fa-camera-retro"></i></span>
+          <img src="assets/logo/favicon.svg" alt="" class="logo-icon" width="40" height="40" />
           <span>JSR Studio</span>
         </a>
         <p>Capturing Moments • Creating Memories</p>
@@ -534,6 +584,7 @@
           <li><a href="#portfolio" data-filter="events">Events</a></li>
           <li><a href="#portfolio" data-filter="birthday">Birthday</a></li>
           <li><a href="#portfolio" data-filter="portraits">Portraits</a></li>
+          <li><a href="#services">Digital Service Centre</a></li>
         </ul>
       </div>
 
