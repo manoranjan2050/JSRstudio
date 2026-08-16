@@ -139,6 +139,9 @@ Open `css/style.css` and edit the CSS variables at the very top of the file
   --color-primary-dark: #3f8fc9;
   --color-light-blue: #eaf6ff;
   --color-very-light-blue: #f6fbff;
+  --color-purple: #9b7ede;        /* Light purple accent */
+  --color-purple-dark: #7c5cc7;
+  --color-purple-light: #f3eeff;
   --color-navy: #12304a;          /* headings / dark text */
   --color-gray: #64748b;          /* body text */
 }
@@ -146,6 +149,26 @@ Open `css/style.css` and edit the CSS variables at the very top of the file
 
 Every button, gradient, badge, and accent color across the site references
 these variables — changing them here updates the whole site consistently.
+The blue→purple gradient used on buttons, icon badges, and dark section
+backgrounds is `--gradient-accent`, also defined at the top of
+`css/style.css`.
+
+### Tailwind CSS
+
+The site loads Tailwind via CDN (`<script src="https://cdn.tailwindcss.com">`
+in `index.html`) with `preflight` disabled, so it only adds utility classes
+— it never resets or overrides the custom design system in
+`css/style.css`. It currently powers the animated gradient "blob" shapes
+(hero, about, services, contact sections) and a couple of responsive
+utility touches. Two custom colors are registered in the inline
+`tailwind.config` script in `index.html`'s `<head>`: `skyblue` and
+`lavender` — keep these in sync with the CSS variables above if you change
+the palette.
+
+> The CDN build shows a console warning about not being for production use
+> — this is expected and harmless for a static, no-build-step site like
+> this one. If you later add a build step, switch to the Tailwind CLI or
+> PostCSS plugin per the [Tailwind docs](https://tailwindcss.com/docs/installation).
 
 ---
 

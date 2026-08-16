@@ -2,6 +2,22 @@
 
 All notable changes to the JSR Studio website are documented in this file.
 
+## [1.1.0] — 2026-08-16
+
+### Added
+- Light-purple (lavender) accent mixed into the sky-blue palette across
+  buttons, icon badges, dark sections, filter tabs, and section labels for
+  a more colorful, premium look.
+- Tailwind CSS via CDN (preflight disabled so it never conflicts with the
+  hand-built design system in `css/style.css`) — used for the animated
+  gradient blobs and a couple of utility touches.
+- Animated decorative gradient blobs (Tailwind `animate-blob` keyframes) in
+  the hero, about, services, and contact sections; hidden on small screens
+  to keep mobile clean and fast.
+- Animated gradient text on the hero headline, a shimmer sweep on primary
+  buttons, and a soft glow pulse on icon badges. All respect
+  `prefers-reduced-motion`.
+
 ## [1.0.0] — 2026-08-16
 
 ### Added
